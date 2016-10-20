@@ -8,8 +8,11 @@ export class PersonLocalStorageService {
     private personLocalStorageKey: string = "personLocalStorageKey";
 
     initializeStorage() {
-        var serialObj = JSON.stringify(new Array<Person>());
-        localStorage.setItem(this.personLocalStorageKey, serialObj);
+        var returnObj = JSON.parse(localStorage.getItem(this.personLocalStorageKey));
+        if (!returnObj) {
+            var serialObj = JSON.stringify(new Array<Person>());
+            localStorage.setItem(this.personLocalStorageKey, serialObj);
+        }
     }
 
     getPersons(): Person[] {
