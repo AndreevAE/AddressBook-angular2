@@ -37,7 +37,6 @@ export class AppComponent implements OnInit {
     constructor(private personService: PersonLocalStorageService) {}
 
     togglestates() {
-        console.log("Toggle State: " + this.state);
         this.state = (this.state === 'hide' ? 'show' : 'hide');
     }
 
@@ -46,6 +45,7 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        this.personService.initializeStorage();
         this.getPersons();
     }
 
