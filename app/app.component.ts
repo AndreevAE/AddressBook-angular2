@@ -90,7 +90,7 @@ export class AppComponent implements OnInit {
             if (p.id === person.id) {
                 p.name = person.name;
                 p.email = person.email;
-                p.phone = person.email;
+                p.phone = person.phone;
                 p.address = person.address;
             }
         });
