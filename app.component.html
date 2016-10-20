@@ -1,0 +1,31 @@
+<div class="body">
+    <button class="button" (click)="togglestates()">Создать контакт</button>
+    <!-- Create New Person Form -->
+    <div class="animation" [@showform]="state">
+        <div class="person">
+            <div class="left">
+                <div><input #nameInput type="text" placeholder="ФИО" class="name"/></div>
+                <div><input #emailInput type="email" placeholder="E-mail" class="email"/></div>
+                <div><input #phoneInput type="tel" placeholder="Телефон" class="phone"/></div>
+            </div>
+            <div><textarea #addressInput type="text" placeholder="Адрес" class="address"></textarea></div>
+        </div>
+        <button #buttonSave class="button right-float" (click)="savePerson(nameInput.value, emailInput.value, phoneInput.value, addressInput.value); nameInput.value = emailInput.value = phoneInput.value = addressInput.value = ''">Сохранить</button>
+    </div>
+    <!-- Find Person TextField -->
+    <div>
+        <input class="search" [(ngModel)]="stringFilter" placeholder="Поиск" />
+    </div>
+    <!-- List of Persons -->
+    <ul>
+        <li *ngFor="let person of persons | filterBy: stringFilter" class="person colorized-person list">
+            <div class="left">
+                <input [(ngModel)]="person.name" type="text" placeholder="ФИО" class="name colorized-textfield" (keyup)="updatePerson(person)"/>
+                <input [(ngModel)]="person.email" type="email" placeholder="E-mail" class="email colorized-textfield" (keyup)="updatePerson(person)"/>
+                <input [(ngModel)]="person.phone" type="tel" placeholder="Телефон" class="phone colorized-textfield" (keyup)="updatePerson(person)"/>
+            </div>
+            <button class="delete" (click)="deletePerson(person)"><b>X</b></button>
+            <textarea [(ngModel)]="person.address" type="text" placeholder="Адрес" class="address colorized-textfield" (keyup)="updatePerson(person)"></textarea>
+        </li>
+    </ul>
+</div>
