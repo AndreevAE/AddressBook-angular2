@@ -1,0 +1,119 @@
+.body {
+    border: 1px solid #cfab3f;
+    background-color: #fff2cc;
+    width: 700px;
+}
+
+.animation {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.colorized-textfield {
+    border-color: #577db5;
+    background-color: #dae8fc;
+}
+
+.person {
+    border: 1px solid;
+    width: 680px;
+    height: 100px;
+    margin: 10px;
+}
+
+.list {
+    list-style-type: none;
+    margin-left: -30px;
+}
+
+.colorized-person {
+    border-color: black;
+    background-color: white;
+}
+
+.name {
+    border: 1px solid;
+    width: 310px;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 3px;
+    float: left;
+}
+
+.phone {
+    border: 1px solid;
+    width: 310px;
+    height: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding: 3px;
+    float: left;
+    clear: left;
+}
+
+.email {
+    border: 1px solid;
+    width: 310px;
+    height: 20px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 3px;
+    float: left;
+    clear: left;
+}
+
+.left {
+    float: left;
+}
+
+.address {
+    border: 1px solid;
+    width: 335px;
+    height: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 3px;
+    word-wrap: break-word;
+    resize: none;
+    float: right;
+}
+
+.button {
+    border: 1px solid #71aa55;
+    background-color: #d5e8d4;
+    width: 160px;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.right-float {
+    float: right;
+}
+
+.search {
+    margin: 10px;
+    width: 500px;
+    height: 30px;
+    padding: 3px;
+}
+
+.delete {
+    border: 1px solid #ad3d3c;
+    background-color: #f8cecc;
+    height: 25px;
+    width: 25px;
+    margin-left: -25px;
+    margin-bottom: -25px;
+    position: relative;
+    z-index: 100;
+    float: right;
+    clear: right;
+}
