@@ -7,6 +7,11 @@ export class PersonLocalStorageService {
     
     private personLocalStorageKey: string = "personLocalStorageKey";
 
+    initializeStorage() {
+        var serialObj = JSON.stringify(new Array<Person>());
+        localStorage.setItem(this.personLocalStorageKey, serialObj);
+    }
+
     getPersons(): Person[] {
         var returnObj: Person[] = JSON.parse(localStorage.getItem(this.personLocalStorageKey));
         return returnObj;
